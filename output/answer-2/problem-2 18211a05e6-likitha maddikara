@@ -1,0 +1,23 @@
+import csv
+file = open("main.csv")
+csvreader = csv.reader(file)
+fields = []
+for row in csvreader:
+    fields.append(row)
+dict={}
+for i in fields:
+     if(i[3] not in dict):
+             dict[i[3]]=[i[1]];
+     else:
+             dict[i[3]].append(i[1])
+h=[]
+for i in dict.keys():
+     h.append([i,min(dict[i],max(dict[i]))
+h.sort(key=lambda x :x[0])
+
+headerfields=[ocupation, min,max]
+with open ('ignore.csv','w', encoding='UTF8' ) as k:
+      write=csv.writer(k);
+      write.writerow(headerfields);
+      write.writerows[h]
+file.close()
