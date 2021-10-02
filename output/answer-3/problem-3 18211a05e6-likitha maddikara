@@ -1,0 +1,15 @@
+import csv 
+file=open(main.csv)
+csvreader = csv.reader(file)
+fields = []
+for row in csvreader:
+    fields.append(row)
+for i in fields:
+     h.append([i[0],i[30],i[31]])
+h.sort(key=lambda x:x[1],x[2])
+headerfields=["Team","Yellow Cards","Red Cards"]
+with open ('ignore.csv','w', encoding='UTF8' ) as k:
+      write=csv.writer(k);
+      write.writerow(headerfields);
+      write.writerows[h]
+file.close()
